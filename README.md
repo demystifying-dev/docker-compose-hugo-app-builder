@@ -137,6 +137,6 @@ hugodockerftw | Press Ctrl+C to stop
 
 - To [Hugo SSG](https://gohugo.io/)
 - To [Docker Compose](https://docs.docker.com/compose/)
-- To the fantastic [Hugo Docker image always kept up to date and offering so many alternatives],
+- To the fantastic [Hugo Docker image always kept up to date and offering so many alternatives](https://hub.docker.com/r/klakegg/hugo/),
   only two of which we're using here, but we will be using more
 
