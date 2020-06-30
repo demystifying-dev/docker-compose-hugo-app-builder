@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  hugoapp:
+    # we need extended, and nodejs for sass!
+    image: klakegg/hugo:ext-nodejs
+    container_name: ${SITE}
+    command: server
+    volumes: 
+      - .:/src
+    ports:
+      - "1313:1313"
+

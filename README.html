@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@5"></script><script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.7.11/dist/browser/view.min.js"></script><script>((data, init, items, opts) => {
+        const {
+          Markmap,
+          loadPlugins
+        } = window.markmap;
+        (init ? init(loadPlugins, items, opts) : Promise.resolve()).then(() => {
+          Markmap.create('svg#mindmap', null, data);
+        });
+      })({"t":"heading","d":1,"v":"Docker Compose for creation and development of an <a href=\"https://gohugo.io/documentation/\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">Hugo</a> static site generator instance","c":[{"t":"heading","d":2,"v":"Video"},{"t":"heading","d":2,"v":"Refs","c":[{"t":"list_item","d":3,"v":"<a href=\"https://docs.docker.com/compose/install/\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">Install Docker Compose</a> on your development system"},{"t":"list_item","d":3,"v":"<a href=\"https://hub.docker.com/r/klakegg/hugo/\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">klakegg/hugo images recommended by Hugo docs</a>"},{"t":"list_item","d":3,"v":"<a href=\"https://vsupalov.com/cleaning-up-after-docker/\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">Vladislav Supalov's very useful article: Cleaning Up After Docker</a>"}]},{"t":"heading","d":2,"v":"Requirements","c":[{"t":"list_item","d":3,"v":"You must have docker-compose <a href=\"https://docs.docker.com/compose/install/\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">installed and running</a> on your development system"}]},{"t":"heading","d":2,"v":"What's the plan","c":[{"t":"list_item","d":3,"v":"Use docker compose to scaffold an Hugo app from scratch,<br/>even without having installed Hugo on your system, and clean up afterwards"},{"t":"list_item","d":3,"v":"Use another docker compose file to bring up your newly created Hugo App in your favorite IDE<br/>and develop in a hot reloading environment"},{"t":"list_item","d":3,"v":"You can install several different apps, using in each case different Hugo releases and types<br/>and of course container names!"}]},{"t":"heading","d":2,"v":"Clone or download this repo","c":[{"t":"list_item","d":3,"v":"Either","c":[{"t":"list_item","d":4,"v":"<a href=\"https://github.com/demystifying-dev/docker-compose-hugo-app-builder.git\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">clone this GitHub repo</a>, or"},{"t":"list_item","d":4,"v":"Download interactively <a href=\"https://github.com/demystifying-dev/docker-compose-hugo-app-builder/archive/master.zip\" title=\"\" target=\"_blank\" rel=\"noopener noreferrer\">from this link</a><br/>and unpack into a folder where you are planning to work on Hugo projects"}]}]},{"t":"heading","d":2,"v":"Create one or more Hugo app instances","c":[{"t":"list_item","d":3,"v":"Note that it runs, then cleans up, according to .env and docker-compose file"}]},{"t":"heading","d":2,"v":"Enter any app instance folder and docker up","c":[{"t":"list_item","d":3,"v":"<pre><code class=\"language-\">docker-compose up\nmkdir layouts/_default\necho &quot;Hello brave world!&quot; > layouts/_default/list.html\n</code></pre>"},{"t":"list_item","d":3,"v":"Point your browser at localhost:1313"}]},{"t":"heading","d":2,"v":"Create 1,2 many Hugo apps"},{"t":"heading","d":2,"v":"Thanks!","c":[{"t":"list_item","d":3,"v":"Hugo"},{"t":"list_item","d":3,"v":"Docker Compose"},{"t":"list_item","d":3,"v":"Docker Compose Hugo image always kept up to date and offering so many alternatives,<br/>only two of which we're using here, but there are very many choices indeed"}]}]})</script>
+</body>
+</html>

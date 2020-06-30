@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  hugoapp:
+    # choose release from https://github.com/gohugoio/hugo/releases
+    # choose image from https://hub.docker.com/r/klakegg/hugo/
+    # image: klakegg/hugo
+    image: klakegg/hugo:alpine
+    container_name: ${SITE}
+    command: new site ${SITE}
+    volumes: 
+      - .:/src
+    ports:
+      - "1313:1313"
