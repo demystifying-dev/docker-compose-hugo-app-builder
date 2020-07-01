@@ -29,20 +29,20 @@
 - (or as an alternative, download interactively [from this link](https://github.com/demystifying-dev/docker-compose-hugo-app-builder/archive/master.zip)) 
   and unpack into any workspace folder reserved for Hugo projects
   - ```bash
-    git clone git@github.com:demystifying-dev/docker-compose-hugo-app-builder.git
-    cd docker-compose-hugo-app-builder
+    $ git clone git@github.com:demystifying-dev/docker-compose-hugo-app-builder.git
+    $ cd docker-compose-hugo-app-builder
     ```
 
 ## Create one or more Hugo app instances
 
 - Specify the site name in the `.env` file
   - ```bash
-    cat .env
+    $ cat .env
     SITE=hugodockerftw
     ```
 - Scaffold the code for your Hugo app
   - ```bash
-    ./create.sh 
+    $ ./create.sh 
     hugodockerftw
     Creating network "docker-compose-hugo-app-builder_default" with the default driver
     Creating hugodockerftw ... done
@@ -68,10 +68,10 @@
   then cleans up, according to .env and docker-compose file,
   and we are left simply with the scaffolded source files
   - ```bash
-    docker-compose -f docker-compose.create.yml ps
+    $ docker-compose -f docker-compose.create.yml ps
     Name   Command   State   Ports
     ------------------------------
-    tree -a hugodockerftw
+    $ tree -a hugodockerftw
     hugodockerftw/
     ├── archetypes
     │   └── default.md
@@ -121,13 +121,13 @@
 - Point your browser at http://localhost:1313
 - Make some changes in any IDE or text editor
   - ```bash
-    code .
+    $ code .
     ```
 - Indeed, go forth and create 1,2 many Hugo apps!
 - Ctrl-C when finished to bring the container down
 - If you wish to clean up to the last possible vestige, do 
   - ```bash
-    docker-compose down -v --rmi all --remove-orphans
+    $ docker-compose down -v --rmi all --remove-orphans
     ```
 - In any case, you are still left with the code you have developed
 
