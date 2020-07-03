@@ -2,7 +2,7 @@
 
 ## Video
 
-[![docker-compose-hugo-app-builder(http://img.youtube.com/vi/0vrhKO2uwhE](https://youtu.be/0vrhKO2uwhE)
+[![docker-compose-hugo-app-builder](http://img.youtube.com/vi/0vrhKO2uwhE/0.jpg)](https://youtu.be/0vrhKO2uwhE)
 
 ## Refs
 
