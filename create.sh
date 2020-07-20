@@ -23,7 +23,7 @@ sudo chown -R $USER: $SITE
 
 # Set up dev instance folder
 cp docker-compose.up.yml $SITE/docker-compose.yml
+cp docker-compose.build.yml $SITE/docker-compose.build.yml
 cp .env $SITE/.env
 cp .gitignore $SITE/.gitignore
 cd $SITE
-

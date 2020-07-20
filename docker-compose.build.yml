@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  hugoapp:
+    # we need extended for sass and node for utils!
+    image: klakegg/hugo:ext-nodejs
+    container_name: ${SITE}
+    environment:
+      - HUGO_ENV
+    # command: server
+    volumes: 
+      - .:/src
+    ports:
+      - "1313:1313"
